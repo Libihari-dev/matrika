@@ -1,0 +1,217 @@
+/* Diagnostics Hero */
+.diag-hero {
+    position: relative;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    background: url('/hero-diagnostics.png') center/cover no-repeat;
+    overflow: hidden;
+}
+
+.diag-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(45, 90, 67, 0.82) 0%, rgba(30, 61, 46, 0.78) 50%, rgba(88, 129, 87, 0.75) 100%);
+}
+
+.diag-hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 100px 24px;
+}
+
+.diag-hero-title {
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 24px;
+    max-width: 600px;
+}
+
+.diag-hero-desc {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    max-width: 600px;
+    margin-bottom: 36px;
+}
+
+/* Process */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.process-step {
+    text-align: center;
+    padding: 32px 20px;
+    position: relative;
+}
+
+.process-step-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--peach);
+    opacity: 0.5;
+    margin-bottom: 8px;
+}
+
+.process-step-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--peach);
+    color: var(--forest-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.process-step h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.process-step p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+/* Pricing */
+.pricing-section {
+    background: linear-gradient(to bottom, var(--cream), var(--white));
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 48px;
+    align-items: start;
+}
+
+.pricing-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 36px 28px;
+    border: 1px solid var(--border-light);
+    transition: var(--transition);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.pricing-featured {
+    border-color: var(--forest-green);
+    box-shadow: var(--shadow-lg);
+    transform: scale(1.03);
+}
+
+.pricing-featured:hover {
+    transform: scale(1.03) translateY(-4px);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--forest-green);
+    color: var(--white);
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 4px 16px;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.pricing-tier {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.pricing-desc {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.pricing-price {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+    margin-bottom: 24px;
+}
+
+.pricing-currency {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--forest-green);
+}
+
+.pricing-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--forest-green);
+}
+
+.pricing-features {
+    list-style: none;
+    margin-bottom: 28px;
+    flex: 1;
+}
+
+.pricing-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    font-size: 0.9rem;
+    color: var(--text-medium);
+}
+
+.pricing-check {
+    color: var(--forest-green);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.pricing-btn {
+    width: 100%;
+    justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pricing-featured {
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+}

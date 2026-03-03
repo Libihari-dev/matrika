@@ -1,0 +1,109 @@
+/* Shared service page styles */
+
+/* Service Hero */
+.service-hero {
+    position: relative;
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.service-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(45, 90, 67, 0.8) 0%, rgba(30, 61, 46, 0.75) 50%, rgba(88, 129, 87, 0.7) 100%);
+}
+
+.service-hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 100px 24px;
+}
+
+.service-hero-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 20px;
+}
+
+.service-hero-desc {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    max-width: 580px;
+}
+
+/* Service Hero Variants with background images */
+.service-hero-literacy {
+    background-image: url('/hero-literacy.png');
+}
+
+.service-hero-sanctuary {
+    background-image: url('/hero-sanctuary.png');
+}
+
+.service-hero-greenlab {
+    background-image: url('/hero-greenlab.png');
+}
+
+/* Service Cards */
+.service-cards {
+    margin-top: 48px;
+}
+
+.service-card {
+    text-align: center;
+    padding: 36px 24px;
+    position: relative;
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.service-card-badge {
+    display: inline-block;
+    background: var(--peach);
+    color: var(--warm-gold);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 100px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.service-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--peach), var(--peach-light));
+    color: var(--forest-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+/* Service CTA */
+.service-cta-section {
+    background: linear-gradient(135deg, var(--forest-green) 0%, var(--forest-green-dark) 100%);
+}
+
+@media (max-width: 768px) {
+    .service-hero-content {
+        padding: 80px 16px;
+    }
+}
